@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 /**
- * Calculations for movable feast days mainly based on Easter Sunday.
+ * Calculate easter and feast days based on easter.
  */
 package de.javanarior.library.eastern;
