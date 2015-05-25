@@ -228,6 +228,223 @@
 
 
 
+    <profiles>
+
+        <profile>
+            <id>validate</id>
+            <activation>
+                <property>
+                    <name>build</name>
+                    <value>qa</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>clirr-maven-plugin</artifactId>
+
+                        <executions>
+                            <execution>
+                                <id>clirr</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>clirr</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+        <profile>
+
+            <id>validate-changelog</id>
+
+            <activation>
+                <property>
+                    <name>build</name>
+                    <value>qa</value>
+                </property>
+            </activation>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-changes-plugin</artifactId>
+                        <configuration>
+                            <skipSnapshots>true</skipSnapshots>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>changes-validate</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>changes-validate</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>changes-check</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>changes-check</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+
+        <profile>
+            <id>qa-checkstyle</id>
+            <activation>
+                <property>
+                    <name>build</name>
+                    <value>qa</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-checkstyle-plugin</artifactId>
+
+                        <executions>
+                            <execution>
+                                <id>checkstyle</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>checkstyle</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+
+        <profile>
+            <id>qa-pmd</id>
+            <activation>
+                <property>
+                    <name>build</name>
+                    <value>qa</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-pmd-plugin</artifactId>
+
+                        <executions>
+                            <execution>
+                                <id>pmd/cpd-analysis</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>cpd</goal>
+                                    <goal>pmd</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+
+        <profile>
+            <id>qa-findbugs</id>
+            <activation>
+                <property>
+                    <name>build</name>
+                    <value>qa</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>findbugs-maven-plugin</artifactId>
+
+                        <executions>
+                            <execution>
+                                <id>findbugs-analysis</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>findbugs</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+
+        <profile>
+
+            <id>qa-coverage</id>
+
+            <activation>
+                <property>
+                    <name>build</name>
+                    <value>qa</value>
+                </property>
+            </activation>
+
+            <build>
+                <plugins>
+
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/example/**</exclude>
+                            </excludes>
+                        </configuration>
+                        <executions>
+
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+
+                            <execution>
+                                <id>report</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+            </build>
+
+        </profile>
+    </profiles>
+
+
+
+
+
     <distributionManagement>
         <site>
             <id>${github.username}/${project.artifactId}</id>
