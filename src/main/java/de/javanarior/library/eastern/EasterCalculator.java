@@ -20,6 +20,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
+ * Calculate easter and feast days based on easter.
  */
 public class EasterCalculator {
 
