@@ -1,0 +1,94 @@
+    ---
+    Introduction
+    ---
+    ---
+    ---
+
+Introduction
+
+  Calculate easter and feast days based on easter.
+  The class de.javanarior.utils.calendar.eastern.EasterCalculator contains method to calculate easter
+and related moveable feast days. The Penance Day is a exception. This day is based on the Wednesday before the 23th, November.
+Currently the following feast days could be calculated:
+
+  * Shrove Monday
+
+  * Shrove Tuesday
+
+  * Ash Wednesday
+
+  * Holy Thursday
+
+  * Good Friday
+
+  * Easter Sunday
+
+  * Easter Monday
+
+  * Ascension Day
+
+  * Whit Sunday
+
+  * Whit Monday
+
+  * Corpus Christi
+
+  * Penance Day
+
+  []
+
+
+  The calculation of Easter Sunday is performed after the extended Version of the Easter Formula of Gauß. I used the
+notion of Heiner Lichtenberg. More information in German could be found here
+
+ * {{http://de.wikipedia.org/wiki/Gau%C3%9Fsche_Osterformel#Eine_erg.C3.A4nzte_Osterformel}}
+
+ * {{https://www.ptb.de/cms/ptb/fachabteilungen/abt4/fb-44/ag-441/darstellung-der-gesetzlichen-zeit/wann-ist-ostern.html}}
+
+[]
+
+* Example
+
+  The following snippet illustrates the usage
+
+----------------------------------------------------
+  Calendar easterSunday = EasterCalculator.easterSunday(EasterCalculator.yearOf(new Date()));
+----------------------------------------------------
+
+* Installation
+
+  Released builds are available from Maven repository at Bintray:
+
+----------------------------------------------------
+  http://dl.bintray.com/javanarior/maven
+----------------------------------------------------
+
+  To add the library to your maven build include the following dependency
+
+----------------------------------------------------
+    <dependency>
+        <groupId>de.javanarior.library</groupId>
+        <artifactId>${project.artifactId}</artifactId>
+        <version>${project.version}</version>
+    <dependency>
+----------------------------------------------------
+
+  Here you will find further examples how to {{{./dependency-info.html}include the artifacts for various build tools}}.
+
+* Changelog
+
+  Changes and new features will be noted here {{{./changes-report.html}Change Log}}
+
+* License
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    {{http://www.apache.org/licenses/LICENSE-2.0}}
+
+  Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
