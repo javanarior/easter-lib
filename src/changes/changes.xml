@@ -4,11 +4,17 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
 
     <properties>
-        <title>Change Log Calendar Utilities</title>
+        <title>Change Log Easter Library</title>
         <author email="javanarior (a) gmail dot com">Sven</author>
     </properties>
 
     <body>
+
+        <release version="0.2.0" description="Rename Holy Thursday to Maundy Thursday." date="2015-05-25">
+            <action dev="Sven" date="2015-05-23" type="fix">
+                Rename Holy Thursday to Maundy Thursday.
+            </action>
+        </release>
 
         <release version="0.1.0" description="Initial release." date="2015-05-25">
             <action dev="Sven" date="2015-05-23" type="add">

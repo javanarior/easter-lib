@@ -26,7 +26,7 @@ public class EasterCalculator {
     private static final int OFFSET_SHROVE_MONDAY = -48;
     private static final int OFFSET_SHROVE_TUESDAY = -47;
     private static final int OFFSET_ASH_WEDNESDAY = -46;
-    private static final int OFFSET_HOLY_THURSDAY = -3;
+    private static final int OFFSET_MAUNDY_THURSDAY = -3;
     private static final int OFFSET_GOOD_FRIDAY = -2;
     private static final int OFFSET_EASTER_MONDAY = 1;
     private static final int OFFSET_ASCENSION_DAY = 39;
@@ -96,14 +96,14 @@ public class EasterCalculator {
 
     /* Gründonnerstag */
     /**
-     * Calculates Holy Thursday in {@code year}.
+     * Calculates Maundy Thursday in {@code year}.
      *
      * @param year
-     *            - year of Holy Thursday
-     * @return Holy Thursday
+     *            - year of Maundy Thursday
+     * @return Maundy Thursday
      */
-    public Calendar holyThursday(int year) {
-        return calculate(year, OFFSET_HOLY_THURSDAY);
+    public Calendar maundyThursday(int year) {
+        return calculate(year, OFFSET_MAUNDY_THURSDAY);
     }
 
     /* Karfreitag */

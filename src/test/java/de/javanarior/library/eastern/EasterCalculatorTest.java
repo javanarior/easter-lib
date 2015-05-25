@@ -64,9 +64,9 @@ public class EasterCalculatorTest {
     }
 
     @Test
-    public void testHolyThursday() {
-        assertEquals(format(calculator.holyThursday(YEAR_2015)), "2015-04-02");
-    }
+        public void testMaundyThursday() {
+            assertEquals(format(calculator.maundyThursday(YEAR_2015)), "2015-04-02");
+        }
 
     @Test
     public void testGoodFriday() {
