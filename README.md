@@ -1,4 +1,4 @@
-# Value Object Library
+# Easter Library
 
 [![Build Status](https://travis-ci.org/javanarior/easter-lib.svg?branch=master)](https://travis-ci.org/javanarior/easter-lib) [ ![Download](https://api.bintray.com/packages/javanarior/maven/easter-lib/images/download.svg) ](https://bintray.com/javanarior/maven/easter-lib/_latestVersion)
 
