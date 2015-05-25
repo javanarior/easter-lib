@@ -52,7 +52,8 @@ notion of Heiner Lichtenberg. More information in German could be found here
   The following snippet illustrates the usage
 
 ----------------------------------------------------
-  Calendar easterSunday = EasterCalculator.easterSunday(EasterCalculator.yearOf(new Date()));
+  EasterCalculator easterCalculator = new EasterCalculator();
+  Calendar easterSunday = easterCalculator.easterSunday(EasterCalculator.yearOf(new Date()));
 ----------------------------------------------------
 
 * Installation
