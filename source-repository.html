@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Date-Revision-yyyymmdd" content="20150525" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>easter-libl &#x2013; Introduction</title>
+    <title>easter-libl &#x2013; Source Repository</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.3.1.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -47,7 +47,7 @@
         Easter Library</a>
                     <span class="divider">|</span>
       </li>
-        <li class="active ">Introduction</li>
+        <li class="active ">Source Repository</li>
         
                 
                     
@@ -68,18 +68,83 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Easter Library</li>
                               
-      <li class="active">
+      <li>
   
-            <a href="#"><i class="none"></i>Introduction</a>
-          </li>
+                          <a href="index.html" title="Introduction">
+          <i class="none"></i>
+        Introduction</a>
+            </li>
                               <li class="nav-header">Project Documentation</li>
-                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                          
       <li>
   
                           <a href="project-info.html" title="Project Information">
-          <i class="icon-chevron-right"></i>
+          <i class="icon-chevron-down"></i>
         Project Information</a>
-                  </li>
+                    <ul class="nav nav-list">
+                    
+      <li>
+  
+                          <a href="dependencies.html" title="Dependencies">
+          <i class="none"></i>
+        Dependencies</a>
+            </li>
+                    
+      <li>
+  
+                          <a href="integration.html" title="Continuous Integration">
+          <i class="none"></i>
+        Continuous Integration</a>
+            </li>
+                    
+      <li>
+  
+                          <a href="dependency-info.html" title="Dependency Information">
+          <i class="none"></i>
+        Dependency Information</a>
+            </li>
+                    
+      <li>
+  
+                          <a href="issue-tracking.html" title="Issue Tracking">
+          <i class="none"></i>
+        Issue Tracking</a>
+            </li>
+                    
+      <li>
+  
+                          <a href="license.html" title="Project License">
+          <i class="none"></i>
+        Project License</a>
+            </li>
+                    
+      <li>
+  
+                          <a href="plugin-management.html" title="Plugin Management">
+          <i class="none"></i>
+        Plugin Management</a>
+            </li>
+                    
+      <li>
+  
+                          <a href="plugins.html" title="Project Plugins">
+          <i class="none"></i>
+        Project Plugins</a>
+            </li>
+                    
+      <li class="active">
+  
+            <a href="#"><i class="none"></i>Source Repository</a>
+          </li>
+                    
+      <li>
+  
+                          <a href="project-summary.html" title="Project Summary">
+          <i class="none"></i>
+        Project Summary</a>
+            </li>
+              </ul>
+        </li>
                                                                                                                                                                                                                                     
       <li>
   
@@ -115,51 +180,26 @@
         <div id="bodyColumn"  class="span9" >
                                   
             <div class="section">
-<h2><a name="Introduction"></a>Introduction</h2>
-<p>Calculate easter and feast days based on easter. The class de.javanarior.utils.calendar.eastern.EasterCalculator contains method to calculate easter and related moveable feast days. The Penance Day is a exception. This day is based on the Wednesday before the 23th, November. Currently the following feast days could be calculated:</p>
-<ul>
-<li>Shrove Monday</li>
-<li>Shrove Tuesday</li>
-<li>Ash Wednesday</li>
-<li>Holy Thursday</li>
-<li>Good Friday</li>
-<li>Easter Sunday</li>
-<li>Easter Monday</li>
-<li>Ascension Day</li>
-<li>Whit Sunday</li>
-<li>Whit Monday</li>
-<li>Corpus Christi</li>
-<li>Penance Day</li></ul>
-<p>The calculation of Easter Sunday is performed after the extended Version of the Easter Formula of Gau&#xdf;. I used the notion of Heiner Lichtenberg. More information in German could be found here</p>
-<ul>
-<li><a class="externalLink" href="http://de.wikipedia.org/wiki/Gau%C3%9Fsche_Osterformel#Eine_erg.C3.A4nzte_Osterformel">http://de.wikipedia.org/wiki/Gau%C3%9Fsche_Osterformel#Eine_erg.C3.A4nzte_Osterformel</a></li>
-<li><a class="externalLink" href="https://www.ptb.de/cms/ptb/fachabteilungen/abt4/fb-44/ag-441/darstellung-der-gesetzlichen-zeit/wann-ist-ostern.html">https://www.ptb.de/cms/ptb/fachabteilungen/abt4/fb-44/ag-441/darstellung-der-gesetzlichen-zeit/wann-ist-ostern.html</a></li></ul>
+<h2><a name="Overview"></a>Overview</h2><a name="Overview"></a>
+<p>This project uses <a class="externalLink" href="http://git-scm.com/">Git</a> to manage its source code. Instructions on Git use can be found at <a class="externalLink" href="http://git-scm.com/documentation">http://git-scm.com/documentation</a>.</p></div>
 <div class="section">
-<h3><a name="Example"></a>Example</h3>
-<p>The following snippet illustrates the usage</p>
-<div>
-<pre>  Calendar easterSunday = EasterCalculator.easterSunday(EasterCalculator.yearOf(new Date()));</pre></div></div>
+<h2><a name="Web_Browser_Access"></a>Web Browser Access</h2><a name="Web_Browser_Access"></a>
+<p>The following is a link to a browsable version of the source repository:</p>
+<div class="source">
+<pre><a class="externalLink" href="scm:https://github.com/javanarior/easter-lib.git">scm:https://github.com/javanarior/easter-lib.git</a></pre></div></div>
 <div class="section">
-<h3><a name="Installation"></a>Installation</h3>
-<p>Released builds are available from Maven repository at Bintray:</p>
-<div>
-<pre>  http://dl.bintray.com/javanarior/maven</pre></div>
-<p>To add the library to your maven build include the following dependency</p>
-<div>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;de.javanarior.library&lt;/groupId&gt;
-        &lt;artifactId&gt;easter-lib&lt;/artifactId&gt;
-        &lt;version&gt;0.1.0&lt;/version&gt;
-    &lt;dependency&gt;</pre></div>
-<p>Here you will find further examples how to <a href="./dependency-info.html">include the artifacts for various build tools</a>.</p></div>
+<h2><a name="Anonymous_Access"></a>Anonymous Access</h2><a name="Anonymous_Access"></a>
+<p>Refer to the documentation of the SCM used for more information about anonymously check out. The connection url is:</p>
+<div class="source">
+<pre>https://github.com/javanarior/easter-lib.git</pre></div></div>
 <div class="section">
-<h3><a name="Changelog"></a>Changelog</h3>
-<p>Changes and new features will be noted here <a href="./changes-report.html">Change Log</a></p></div>
+<h2><a name="Developer_Access"></a>Developer Access</h2><a name="Developer_Access"></a>
+<p>Only project developers can access the Git tree via this method (See <a class="externalLink" href="http://git-scm.com/docs/git-clone">http://git-scm.com/docs/git-clone</a>).</p>
+<div class="source">
+<pre>$ git clone --branch releases/easter-lib-0.1.0 git@github.com:javanarior/easter-lib.git</pre></div></div>
 <div class="section">
-<h3><a name="License"></a>License</h3>
-<p>Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
-<p><a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p></div></div>
+<h2><a name="Access_from_Behind_a_Firewall"></a>Access from Behind a Firewall</h2><a name="Access_from_Behind_a_Firewall"></a>
+<p>Refer to the documentation of the SCM used for more information about access behind a firewall.</p></div>
                   </div>
             </div>
           </div>
