@@ -36,7 +36,7 @@ public class EasterCalculator {
     private static final int OFFSET_CORPUS_CHRISTI = 60;
 
     /**
-     * Returns the year of {@code date}.
+     * Returns the year of {@code calendar}.
      *
      * @param calendar
      *            - date to read year from
